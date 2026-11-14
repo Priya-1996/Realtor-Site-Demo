@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DPS Realty – Your Home Our Imagination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B1F20',      // deep lagoon
+            lagoon: '#17383A',   // mid teal
+            brass: '#CDAE7A',    // champagne brass accent
+            mist: '#E9EFEC'      // soft sea-glass text
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif']
+          },
+          keyframes: {
+            marquee: {from: {transform: 'translateX(0)'}, to: {transform: 'translateX(-50%)'}},
+            'marquee-rev': {from: {transform: 'translateX(-50%)'}, to: {transform: 'translateX(0)'}}
+          },
+          animation: {
+            marquee: 'marquee 50s linear infinite',
+            'marquee-rev': 'marquee-rev 60s linear infinite'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-mist font-sans text-ink antialiased">
+
+  <!-- NAVBAR -->
+  <header class="relative z-50 w-full bg-ink bg-gradient-to-r from-ink via-lagoon to-ink border-b border-brass/30">
+
+    <!-- Mobile toggle (pure CSS, no JS) -->
+    <input type="checkbox" id="nav-toggle" class="peer sr-only" />
+    <label for="nav-toggle" aria-label="Toggle menu"
+      class="absolute left-4 top-0 z-10 flex h-[72px] w-10 cursor-pointer items-center justify-center text-mist peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-brass lg:hidden">
+      <span class="block w-6 space-y-[6px]">
+        <span class="block h-[2px] bg-current"></span>
+        <span class="block h-[2px] w-4 bg-current"></span>
+        <span class="block h-[2px] bg-current"></span>
+      </span>
+    </label>
+
+    <!-- Bar -->
+    <div
+      class="mx-auto flex h-[72px] max-w-[1400px] items-center justify-center px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-14 lg:px-8">
+
+      <!-- Left links -->
+      <nav aria-label="Primary" class="hidden items-center justify-end gap-9 lg:flex">
+        <a href="#"
+          class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">About</a>
+        <a href="#"
+          class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">Communities</a>
+        <a href="#"
+          class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">Properties</a>
+      </nav>
+
+      <!-- Logo -->
+      <a href="#" aria-label="DPS Realty home"
+        class="flex flex-col items-center leading-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+        <span class="flex items-center gap-2 font-display text-[28px] font-semibold tracking-[0.28em] text-mist">
+          <svg viewBox="0 0 24 24" class="h-6 w-6 text-brass" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21V11l9-8 9 8v10" />
+            <path d="M9 21v-6a3 3 0 0 1 6 0v6" />
+          </svg>
+          DPS
+        </span>
+        <span class="mt-1.5 text-[9px] font-semibold tracking-[0.5em] text-brass uppercase">Realty</span>
+      </a>
+
+      <!-- Right links + icons -->
+      <div class="hidden items-center justify-start gap-9 lg:flex">
+        <nav aria-label="Secondary" class="flex items-center gap-9">
+          <a href="#"
+            class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">Media
+            Center</a>
+          <a href="#"
+            class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">Careers</a>
+          <a href="#"
+            class="text-xs font-semibold tracking-[0.18em] text-mist/90 uppercase transition-colors duration-200 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">Contact
+            Us</a>
+        </nav>
+      </div>
+
+      <!-- Mobile: logo is centered; search sits right -->
+      <button type="button" aria-label="Search"
+        class="absolute right-4 top-0 flex h-[72px] w-10 items-center justify-center text-mist lg:hidden">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <nav aria-label="Mobile" class="hidden border-t border-brass/20 bg-ink peer-checked:block lg:hidden">
+      <ul class="mx-auto max-w-[1400px] divide-y divide-brass/10 px-6 py-2">
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">About</a>
+        </li>
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">Communities</a>
+        </li>
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">Properties</a>
+        </li>
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">Media
+            Center</a></li>
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">Careers</a>
+        </li>
+        <li><a href="#"
+            class="block py-4 text-sm font-semibold tracking-[0.16em] text-mist uppercase hover:text-brass">Contact
+            Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section
+    class="relative isolate flex h-screen min-h-[600px] w-full items-end overflow-hidden bg-ink supports-[height:100dvh]:h-[100dvh]"
+    aria-label="Welcome">
+
+    <!-- Layer 1: animated skyline (shows while video loads, or if no video is set) -->
+    <div class="absolute inset-0 -z-30 bg-gradient-to-b from-lagoon via-ink to-ink" aria-hidden="true">
+      <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMax slice" class="absolute bottom-0 h-3/4 w-full text-ink">
+        <g fill="currentColor" opacity="0.85">
+          <rect x="60" y="260" width="110" height="240" />
+          <rect x="200" y="160" width="90" height="340" />
+          <rect x="320" y="220" width="130" height="280" />
+          <rect x="480" y="90" width="80" height="410" />
+          <rect x="590" y="200" width="150" height="300" />
+          <rect x="770" y="130" width="100" height="370" />
+          <rect x="900" y="240" width="120" height="260" />
+          <rect x="1050" y="110" width="90" height="390" />
+          <rect x="1170" y="210" width="140" height="290" />
+          <rect x="1330" y="280" width="90" height="220" />
+        </g>
+        <g fill="#CDAE7A">
+          <rect class="animate-pulse" x="220" y="200" width="8" height="12" opacity="0.7" />
+          <rect class="animate-pulse [animation-delay:1s]" x="250" y="260" width="8" height="12" opacity="0.5" />
+          <rect class="animate-pulse [animation-delay:2s]" x="500" y="140" width="8" height="12" opacity="0.7" />
+          <rect class="animate-pulse [animation-delay:.5s]" x="520" y="220" width="8" height="12" opacity="0.5" />
+          <rect class="animate-pulse [animation-delay:1.5s]" x="790" y="180" width="8" height="12" opacity="0.7" />
+          <rect class="animate-pulse" x="1070" y="160" width="8" height="12" opacity="0.6" />
+          <rect class="animate-pulse [animation-delay:2.5s]" x="1090" y="250" width="8" height="12" opacity="0.5" />
+          <rect class="animate-pulse [animation-delay:1s]" x="340" y="280" width="8" height="12" opacity="0.5" />
+          <rect class="animate-pulse [animation-delay:2s]" x="940" y="300" width="8" height="12" opacity="0.6" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Layer 2: background video. Replace the src files with your own. -->
+    <!-- <video class="absolute inset-0 -z-20 h-full w-full object-cover motion-reduce:hidden" autoplay muted loop
+      playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="hero.webm" type="video/webm" />
+      <source src="DPS_Group_Property_Showcase_Demo_H264.mp4" type="video/mp4" />
+    </video> -->
+    <video class="absolute inset-0 -z-20 h-full w-full object-cover motion-reduce:hidden" autoplay muted loop
+      playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+      <source src="https://assets.mixkit.co/videos/10032/10032-720.mp4" type="video/mp4" />
+      <source src="https://assets.mixkit.co/videos/10032/10032-360.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Layer 3: tint so text stays readable on any footage -->
+    <div class="absolute inset-0 -z-10 bg-ink/40 bg-gradient-to-t from-ink via-ink/40 to-lagoon/30" aria-hidden="true">
+    </div>
+
+    <!-- Content -->
+    <div class="mx-auto w-full max-w-[1400px] px-5 pb-24 sm:px-8 sm:pb-20 lg:px-12 lg:pb-16">
+      <div class="max-w-2xl">
+        <h1 class="font-display text-4xl font-semibold leading-[1.05] text-mist sm:text-5xl md:text-6xl lg:text-7xl">
+          Find the address that fits your life
+        </h1>
+        <p class="mt-5 max-w-md text-sm leading-relaxed text-mist/80 sm:text-base">
+          Apartments, villas and waterfront homes in the city's best communities, with advisors who stay with you from
+          first viewing to handover.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#properties"
+            class="inline-flex items-center justify-center rounded-full bg-brass px-7 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+            Browse properties
+          </a>
+          <a href="#contact"
+            class="inline-flex items-center justify-center rounded-full border border-mist/40 px-7 py-3.5 text-sm font-bold text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+            Book a viewing
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick-contact buttons (right edge) -->
+    <ul
+      class="absolute bottom-6 right-5 flex flex-row gap-2 sm:right-8 lg:bottom-auto lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:gap-3">
+      <li>
+        <a href="tel:+000000000" aria-label="Call us"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-brass/50 bg-ink/70 text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass lg:h-11 lg:w-16 lg:rounded-l-full lg:rounded-r-none lg:border-r-0">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://wa.me/000000000" aria-label="Chat on WhatsApp"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-brass/50 bg-ink/70 text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass lg:h-11 lg:w-16 lg:rounded-l-full lg:rounded-r-none lg:border-r-0">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#video-call" aria-label="Book a video tour"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-brass/50 bg-ink/70 text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass lg:h-11 lg:w-16 lg:rounded-l-full lg:rounded-r-none lg:border-r-0">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="6" width="14" height="12" rx="2" />
+            <path d="m22 8-6 4 6 4z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="detail" class="relative h-[400vh] bg-mist" aria-label="Our craftsmanship">
+    <div
+      class="sticky top-0 h-screen w-full overflow-hidden bg-mist bg-gradient-to-br from-white via-mist to-mist supports-[height:100dvh]:h-[100dvh]">
+
+      <!-- Phase 1: big intro title (scales up and fades as you scroll) -->
+      <div id="intro"
+        class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center will-change-transform">
+        <p class="mb-5 text-[11px] font-bold tracking-[0.5em] text-[#8A6B35] uppercase sm:text-xs">Our philosophy</p>
+        <h2
+          class="font-display text-6xl font-semibold uppercase leading-[0.9] tracking-wide text-ink sm:text-8xl lg:text-[9.5rem]">
+          The art of<br /><span class="text-[#8A6B35]">craft</span>
+        </h2>
+        <p class="mt-8 max-w-md text-sm leading-relaxed text-ink/70 sm:text-base">
+          Great homes are decided in the small things. Keep scrolling to follow one from first sketch to final handover.
+        </p>
+        <svg viewBox="0 0 24 24" class="mt-10 h-6 w-6 animate-bounce text-[#8A6B35]" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+
+      <!-- Phase 2: pillars (fade in, then switch with scroll progress) -->
+      <div id="stage"
+        class="absolute inset-0 flex flex-col gap-5 px-5 pb-8 pt-20 opacity-0 will-change-transform sm:px-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-12 lg:py-0">
+
+        <!-- Text column -->
+        <div class="order-2 flex min-h-0 flex-1 flex-col justify-center lg:order-1 lg:flex-none">
+          <p class="text-[11px] font-bold tracking-[0.4em] text-[#8A6B35] uppercase sm:text-xs">From concept to
+            completion</p>
+          <h3 class="mt-3 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl lg:text-5xl">Four
+            pillars behind every DPS home</h3>
+
+          <div class="mt-6 flex gap-5 lg:mt-10">
+            <!-- progress rail -->
+            <div class="relative w-px shrink-0 bg-ink/15" aria-hidden="true">
+              <div id="bar" class="absolute inset-x-0 top-0 h-full origin-top scale-y-0 bg-[#8A6B35]"></div>
+            </div>
+
+            <ol class="space-y-4 lg:space-y-6">
+              <li data-item data-active="true" class="group">
+                <div
+                  class="flex items-baseline gap-3 text-ink/40 transition-colors duration-500 group-data-[active=true]:text-ink">
+                  <span class="text-xs font-bold tracking-widest group-data-[active=true]:text-[#8A6B35]">01</span>
+                  <span class="font-display text-2xl font-semibold sm:text-3xl">Craftsmanship</span>
+                </div>
+                <p
+                  class="max-h-0 overflow-hidden pl-8 text-sm leading-relaxed text-ink/70 opacity-0 transition-all duration-500 group-data-[active=true]:max-h-28 group-data-[active=true]:pt-2 group-data-[active=true]:opacity-100">
+                  Skilled hands finish every joint, edge and surface, checked against a standard we set ourselves.</p>
+              </li>
+              <li data-item data-active="false" class="group">
+                <div
+                  class="flex items-baseline gap-3 text-ink/40 transition-colors duration-500 group-data-[active=true]:text-ink">
+                  <span class="text-xs font-bold tracking-widest group-data-[active=true]:text-[#8A6B35]">02</span>
+                  <span class="font-display text-2xl font-semibold sm:text-3xl">Design</span>
+                </div>
+                <p
+                  class="max-h-0 overflow-hidden pl-8 text-sm leading-relaxed text-ink/70 opacity-0 transition-all duration-500 group-data-[active=true]:max-h-28 group-data-[active=true]:pt-2 group-data-[active=true]:opacity-100">
+                  Layouts shaped around light, views and how families actually live, not just how a floor plan looks.
+                </p>
+              </li>
+              <li data-item data-active="false" class="group">
+                <div
+                  class="flex items-baseline gap-3 text-ink/40 transition-colors duration-500 group-data-[active=true]:text-ink">
+                  <span class="text-xs font-bold tracking-widest group-data-[active=true]:text-[#8A6B35]">03</span>
+                  <span class="font-display text-2xl font-semibold sm:text-3xl">Engineering</span>
+                </div>
+                <p
+                  class="max-h-0 overflow-hidden pl-8 text-sm leading-relaxed text-ink/70 opacity-0 transition-all duration-500 group-data-[active=true]:max-h-28 group-data-[active=true]:pt-2 group-data-[active=true]:opacity-100">
+                  In-house teams control structure, materials and schedules so quality never gets lost between
+                  contractors.</p>
+              </li>
+              <li data-item data-active="false" class="group">
+                <div
+                  class="flex items-baseline gap-3 text-ink/40 transition-colors duration-500 group-data-[active=true]:text-ink">
+                  <span class="text-xs font-bold tracking-widest group-data-[active=true]:text-[#8A6B35]">04</span>
+                  <span class="font-display text-2xl font-semibold sm:text-3xl">Handover</span>
+                </div>
+                <p
+                  class="max-h-0 overflow-hidden pl-8 text-sm leading-relaxed text-ink/70 opacity-0 transition-all duration-500 group-data-[active=true]:max-h-28 group-data-[active=true]:pt-2 group-data-[active=true]:opacity-100">
+                  A final walkthrough with your advisor, and support that continues long after you collect the keys.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Media column: replace each panel's contents with an <img class="h-full w-full object-cover"> -->
+        <div
+          class="order-1 relative h-[36vh] w-full overflow-hidden rounded-2xl border border-ink/15 bg-white shadow-xl shadow-ink/10 sm:h-[42vh] lg:order-2 lg:h-[70vh]">
+          <div data-panel data-active="true"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-white to-mist opacity-0 scale-105 transition duration-700 data-[active=true]:scale-100 data-[active=true]:opacity-100">
+            <svg viewBox="0 0 200 200" class="h-2/3 text-lagoon" fill="none" stroke="currentColor" stroke-width="1.2"
+              aria-hidden="true">
+              <circle cx="100" cy="100" r="80" />
+              <circle cx="100" cy="100" r="60" />
+              <circle cx="100" cy="100" r="40" />
+              <circle cx="100" cy="100" r="20" />
+              <path d="M100 20v160M20 100h160" />
+            </svg>
+          </div>
+          <div data-panel data-active="false"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-tr from-mist to-white opacity-0 scale-105 transition duration-700 data-[active=true]:scale-100 data-[active=true]:opacity-100">
+            <svg viewBox="0 0 200 200" class="h-2/3 text-lagoon" fill="none" stroke="currentColor" stroke-width="1.2"
+              aria-hidden="true">
+              <path d="M20 180V80l80-60 80 60v100z" />
+              <path d="M80 180v-50h40v50M20 80h160M100 20v60" />
+            </svg>
+          </div>
+          <div data-panel data-active="false"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-bl from-white to-mist opacity-0 scale-105 transition duration-700 data-[active=true]:scale-100 data-[active=true]:opacity-100">
+            <svg viewBox="0 0 200 200" class="h-2/3 text-lagoon" fill="none" stroke="currentColor" stroke-width="1.2"
+              aria-hidden="true">
+              <path d="M20 180h160M40 180V60h120v120M40 100h120M40 140h120M80 60v120M120 60v120" />
+              <path d="M30 60l70-40 70 40" />
+            </svg>
+          </div>
+          <div data-panel data-active="false"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-tl from-mist to-white opacity-0 scale-105 transition duration-700 data-[active=true]:scale-100 data-[active=true]:opacity-100">
+            <svg viewBox="0 0 200 200" class="h-2/3 text-lagoon" fill="none" stroke="currentColor" stroke-width="1.2"
+              aria-hidden="true">
+              <circle cx="70" cy="100" r="30" />
+              <circle cx="70" cy="100" r="12" />
+              <path d="M100 100h80M150 100v24M170 100v16" />
+            </svg>
+          </div>
+          <span id="counter" class="absolute bottom-3 right-4 text-xs font-bold tracking-[0.3em] text-[#8A6B35]">01 /
+            04</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter -->
+
+  <section id="stats" class="bg-ink bg-gradient-to-r from-ink via-lagoon to-ink py-16 sm:py-20 lg:py-24"
+    aria-label="DPS Realty in numbers">
+    <div class="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+      <div class="grid grid-cols-2 gap-x-4 gap-y-12 lg:grid-cols-4 lg:gap-x-0">
+
+        <!-- Stat 1 -->
+        <div class="border-l border-mist/15 pl-5 sm:pl-8 lg:first:border-l-0 lg:first:pl-0">
+          <p
+            class="flex items-baseline font-display text-5xl font-semibold leading-none text-mist tabular-nums sm:text-6xl xl:text-7xl">
+            <span data-count="3000">3000</span><span class="text-brass">+</span>
+          </p>
+          <p class="mt-3 max-w-[14rem] text-xs leading-snug text-mist/70 sm:text-sm lg:text-base">acres of prime land
+            bank</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="border-l border-mist/15 pl-5 sm:pl-8">
+          <p
+            class="flex items-baseline font-display text-5xl font-semibold leading-none text-mist tabular-nums sm:text-6xl xl:text-7xl">
+            <span data-count="66">66</span>
+          </p>
+          <p class="mt-3 max-w-[14rem] text-xs leading-snug text-mist/70 sm:text-sm lg:text-base">iconic projects</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="border-l border-mist/15 pl-5 sm:pl-8">
+          <p
+            class="flex items-baseline font-display text-5xl font-semibold leading-none text-mist tabular-nums sm:text-6xl xl:text-7xl">
+            <span data-count="2279">2279</span><span class="text-brass">K+</span>
+          </p>
+          <p class="mt-3 max-w-[14rem] text-xs leading-snug text-mist/70 sm:text-sm lg:text-base">Sq. M delivered</p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="border-l border-mist/15 pl-5 sm:pl-8">
+          <p
+            class="flex items-baseline font-display text-5xl font-semibold leading-none text-mist tabular-nums sm:text-6xl xl:text-7xl">
+            <span data-count="3716">3716</span><span class="text-brass">K+</span>
+          </p>
+          <p class="mt-3 max-w-[14rem] text-xs leading-snug text-mist/70 sm:text-sm lg:text-base">Sq. M under
+            construction</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERLUDE: starts from here ===== -->
+  <section id="interlude" class="relative isolate overflow-hidden bg-mist py-28 sm:py-36 lg:py-44"
+    aria-label="Our signature">
+
+    <!-- curved edges: gradients copied from the neighbouring sections so the seams disappear -->
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="absolute inset-x-0 top-0 h-8 w-full sm:h-14 lg:h-20"
+      aria-hidden="true">
+      <defs>
+        <!-- same as the counter: from-ink via-lagoon to-ink -->
+        <linearGradient id="edgeTop" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0B1F20" />
+          <stop offset=".5" stop-color="#17383A" />
+          <stop offset="1" stop-color="#0B1F20" />
+        </linearGradient>
+      </defs>
+      <path d="M0 0h1440v20C1100 80 340 80 0 20z" fill="url(#edgeTop)" />
+      <path d="M0 20C340 80 1100 80 1440 20" fill="none" stroke="#CDAE7A" stroke-opacity=".7" stroke-width="1"
+        vector-effect="non-scaling-stroke" />
+    </svg>
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="absolute inset-x-0 bottom-0 h-8 w-full sm:h-14 lg:h-20"
+      aria-hidden="true">
+      <defs>
+        <!-- matches the top edge of the first showcase slide -->
+        <linearGradient id="edgeBottom" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0E2527" />
+          <stop offset=".5" stop-color="#152E30" />
+          <stop offset="1" stop-color="#1D4547" />
+        </linearGradient>
+      </defs>
+      <path d="M0 80h1440V60C1100 0 340 0 0 60z" fill="url(#edgeBottom)" />
+      <path d="M0 60C340 0 1100 0 1440 60" fill="none" stroke="#CDAE7A" stroke-opacity=".7" stroke-width="1"
+        vector-effect="non-scaling-stroke" />
+    </svg>
+
+    <!-- soft glows -->
+    <div class="absolute -left-20 top-1/4 -z-10 h-72 w-72 rounded-full bg-brass/25 blur-3xl sm:h-96 sm:w-96"
+      aria-hidden="true"></div>
+    <div class="absolute -right-24 bottom-1/4 -z-10 h-72 w-72 rounded-full bg-lagoon/15 blur-3xl sm:h-96 sm:w-96"
+      aria-hidden="true"></div>
+
+    <!-- abstract art: nested arches (static) + slow-turning rosette -->
+    <div class="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center" aria-hidden="true">
+      <svg viewBox="0 0 800 800" class="absolute h-[130%] w-auto text-lagoon sm:h-[150%]" fill="none"
+        stroke="currentColor" stroke-width="1" opacity=".22">
+        <path d="M250 640V400a150 150 0 0 1 300 0v240" />
+        <path d="M200 640V400a200 200 0 0 1 400 0v240" />
+        <path d="M150 640V400a250 250 0 0 1 500 0v240" />
+        <path d="M100 640V400a300 300 0 0 1 600 0v240" />
+        <path d="M60 640h680" />
+      </svg>
+      <svg viewBox="0 0 800 800"
+        class="absolute h-[120%] w-auto animate-spin text-brass [animation-duration:90s] sm:h-[140%]" fill="none"
+        stroke="currentColor" stroke-width="1" opacity=".55">
+        <circle cx="400" cy="400" r="380" />
+        <circle cx="400" cy="400" r="320" stroke-dasharray="2 8" />
+        <circle cx="400" cy="400" r="260" />
+        <circle cx="400" cy="400" r="200" stroke-dasharray="2 8" />
+        <circle cx="400" cy="400" r="140" />
+        <g>
+          <path d="M400 20V780" />
+          <path d="M400 20V780" transform="rotate(30 400 400)" />
+          <path d="M400 20V780" transform="rotate(60 400 400)" />
+          <path d="M400 20V780" transform="rotate(90 400 400)" />
+          <path d="M400 20V780" transform="rotate(120 400 400)" />
+          <path d="M400 20V780" transform="rotate(150 400 400)" />
+        </g>
+      </svg>
+      <svg viewBox="0 0 800 800"
+        class="absolute h-[90%] w-auto animate-spin text-lagoon [animation-direction:reverse] [animation-duration:140s] sm:h-[105%]"
+        fill="none" stroke="currentColor" stroke-width="1" opacity=".3">
+        <rect x="150" y="150" width="500" height="500" />
+        <rect x="150" y="150" width="500" height="500" transform="rotate(45 400 400)" />
+        <circle cx="400" cy="400" r="230" />
+      </svg>
+    </div>
+
+    <!-- content -->
+    <div class="relative mx-auto max-w-4xl px-6 text-center">
+      <p class="text-[11px] font-bold uppercase tracking-[0.5em] text-[#8A6B35] sm:text-xs">Our signature</p>
+      <h2 class="mt-6 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl lg:text-7xl">
+        Every line drawn with <em class="font-medium text-[#8A6B35]">intent</em>, every space made to be lived in.
+      </h2>
+      <div
+        class="mx-auto mt-10 flex items-center justify-center gap-4 text-xs font-bold uppercase tracking-[0.3em] text-ink/70 sm:gap-6 sm:text-sm">
+        <span>Design</span>
+        <span class="h-1.5 w-1.5 rotate-45 bg-brass" aria-hidden="true"></span>
+        <span>Craft</span>
+        <span class="h-1.5 w-1.5 rotate-45 bg-brass" aria-hidden="true"></span>
+        <span>Legacy</span>
+      </div>
+    </div>
+  </section>
+  <!-- ========== -->
+
+  <!-- PROJECT CAROUSEL -->
+  <section id="showcase" role="region" aria-roledescription="carousel" aria-label="Featured projects"
+    class="relative h-[400vh] bg-ink text-mist">
+    <div id="stage" class="sticky top-0 h-screen w-full overflow-hidden bg-ink supports-[height:100dvh]:h-[100dvh]">
+
+      <!-- ========== SLIDES ========== -->
+      <!-- To use real photos: replace the gradient+svg inside each "bg" div with <img class="h-full w-full object-cover" src="..." alt=""> -->
+
+      <!-- Slide 1 -->
+      <article data-slide data-active="true" aria-roledescription="slide" aria-label="1 of 4"
+        class="group absolute inset-0 will-change-transform shadow-[0_-30px_60px_rgba(0,0,0,0.45)]">
+        <div
+          class="absolute inset-0 scale-110 bg-gradient-to-br from-lagoon via-[#1d4547] to-ink transition-transform duration-[7000ms] ease-out motion-reduce:transition-none group-data-[active=true]:scale-100">
+          <div class="absolute right-[12%] top-[14%] h-56 w-56 rounded-full bg-brass/25 blur-3xl"></div>
+          <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice"
+            class="absolute bottom-0 h-4/5 w-full text-ink" aria-hidden="true">
+            <g fill="currentColor" opacity=".9">
+              <rect x="700" y="80" width="120" height="520" />
+              <rect x="840" y="180" width="100" height="420" />
+              <rect x="960" y="120" width="140" height="480" />
+              <rect x="1120" y="250" width="110" height="350" />
+              <rect x="560" y="260" width="120" height="340" />
+              <rect x="400" y="330" width="140" height="270" />
+              <rect x="0" y="400" width="380" height="200" />
+            </g>
+            <g fill="#CDAE7A" opacity=".55">
+              <rect x="730" y="130" width="8" height="12" />
+              <rect x="760" y="200" width="8" height="12" />
+              <rect x="990" y="190" width="8" height="12" />
+              <rect x="1020" y="260" width="8" height="12" />
+              <rect x="870" y="260" width="8" height="12" />
+            </g>
+          </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center px-5 pb-28 sm:px-12 lg:px-[8%]">
+          <div>
+            <p
+              class="translate-y-6 text-3xl font-light uppercase tracking-wide opacity-0 transition duration-700 sm:text-5xl lg:text-6xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-300">
+              DPS</p>
+            <h2
+              class="translate-y-6 text-4xl font-extrabold uppercase leading-none tracking-wide opacity-0 transition duration-700 sm:text-6xl lg:text-7xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[450ms]">
+              Aurelia Heights</h2>
+            <p
+              class="mt-4 translate-y-6 pl-1 text-xs font-bold uppercase tracking-[0.4em] text-brass opacity-0 transition duration-700 sm:text-sm group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[600ms]">
+              Marina Bay</p>
+            <a href="#"
+              class="mt-8 inline-block translate-y-6 border border-mist/50 bg-white/10 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] opacity-0 transition duration-700 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:px-10 sm:text-xs group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[750ms]">Discover
+              the collection</a>
+          </div>
+        </div>
+        <div data-dim class="pointer-events-none absolute inset-0 bg-ink opacity-0"></div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article data-slide data-active="false" aria-roledescription="slide" aria-label="2 of 4"
+        class="group absolute inset-0 will-change-transform shadow-[0_-30px_60px_rgba(0,0,0,0.45)]">
+        <div
+          class="absolute inset-0 scale-110 bg-gradient-to-tr from-ink via-[#14393b] to-lagoon transition-transform duration-[7000ms] ease-out motion-reduce:transition-none group-data-[active=true]:scale-100">
+          <div class="absolute left-[40%] top-[10%] h-64 w-64 rounded-full bg-brass/20 blur-3xl"></div>
+          <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice"
+            class="absolute bottom-0 h-3/4 w-full text-ink" aria-hidden="true">
+            <g fill="currentColor" opacity=".9">
+              <path d="M620 600V260q0-90 90-90t90 90v340z" />
+              <path d="M820 600V320q0-70 70-70t70 70v280z" />
+              <rect x="1000" y="300" width="160" height="300" />
+              <rect x="1180" y="380" width="180" height="220" />
+              <rect x="420" y="340" width="170" height="260" />
+              <rect x="0" y="430" width="400" height="170" />
+            </g>
+            <g fill="#CDAE7A" opacity=".55">
+              <rect x="700" y="260" width="8" height="12" />
+              <rect x="880" y="320" width="8" height="12" />
+              <rect x="1040" y="350" width="8" height="12" />
+              <rect x="480" y="390" width="8" height="12" />
+            </g>
+          </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center px-5 pb-28 sm:px-12 lg:px-[8%]">
+          <div>
+            <p
+              class="translate-y-6 text-3xl font-light uppercase tracking-wide opacity-0 transition duration-700 sm:text-5xl lg:text-6xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-300">
+              DPS</p>
+            <h2
+              class="translate-y-6 text-4xl font-extrabold uppercase leading-none tracking-wide opacity-0 transition duration-700 sm:text-6xl lg:text-7xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[450ms]">
+              Solene</h2>
+            <p
+              class="mt-4 translate-y-6 pl-1 text-xs font-bold uppercase tracking-[0.4em] text-brass opacity-0 transition duration-700 sm:text-sm group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[600ms]">
+              Palm Cove</p>
+            <a href="#"
+              class="mt-8 inline-block translate-y-6 border border-mist/50 bg-white/10 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] opacity-0 transition duration-700 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:px-10 sm:text-xs group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[750ms]">Discover
+              the collection</a>
+          </div>
+        </div>
+        <div data-dim class="pointer-events-none absolute inset-0 bg-ink opacity-0"></div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article data-slide data-active="false" aria-roledescription="slide" aria-label="3 of 4"
+        class="group absolute inset-0 will-change-transform shadow-[0_-30px_60px_rgba(0,0,0,0.45)]">
+        <div
+          class="absolute inset-0 scale-110 bg-gradient-to-bl from-lagoon via-ink to-[#10292b] transition-transform duration-[7000ms] ease-out motion-reduce:transition-none group-data-[active=true]:scale-100">
+          <div class="absolute right-[25%] top-[18%] h-52 w-52 rounded-full bg-brass/25 blur-3xl"></div>
+          <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice"
+            class="absolute bottom-0 h-3/4 w-full text-ink" aria-hidden="true">
+            <g fill="currentColor" opacity=".9">
+              <rect x="540" y="200" width="360" height="400" />
+              <rect x="940" y="300" width="200" height="300" />
+              <rect x="1160" y="360" width="200" height="240" />
+              <rect x="340" y="320" width="170" height="280" />
+              <rect x="0" y="380" width="320" height="220" />
+            </g>
+            <g fill="#CDAE7A" opacity=".55">
+              <rect x="580" y="250" width="8" height="12" />
+              <rect x="640" y="250" width="8" height="12" />
+              <rect x="700" y="320" width="8" height="12" />
+              <rect x="980" y="350" width="8" height="12" />
+              <rect x="380" y="380" width="8" height="12" />
+            </g>
+          </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center px-5 pb-28 sm:px-12 lg:px-[8%]">
+          <div>
+            <p
+              class="translate-y-6 text-3xl font-light uppercase tracking-wide opacity-0 transition duration-700 sm:text-5xl lg:text-6xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-300">
+              DPS</p>
+            <h2
+              class="translate-y-6 text-4xl font-extrabold uppercase leading-none tracking-wide opacity-0 transition duration-700 sm:text-6xl lg:text-7xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[450ms]">
+              Corvina Gardens</h2>
+            <p
+              class="mt-4 translate-y-6 pl-1 text-xs font-bold uppercase tracking-[0.4em] text-brass opacity-0 transition duration-700 sm:text-sm group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[600ms]">
+              Harbour District</p>
+            <a href="#"
+              class="mt-8 inline-block translate-y-6 border border-mist/50 bg-white/10 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] opacity-0 transition duration-700 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:px-10 sm:text-xs group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[750ms]">Discover
+              the collection</a>
+          </div>
+        </div>
+        <div data-dim class="pointer-events-none absolute inset-0 bg-ink opacity-0"></div>
+      </article>
+
+      <!-- Slide 4 -->
+      <article data-slide data-active="false" aria-roledescription="slide" aria-label="4 of 4"
+        class="group absolute inset-0 will-change-transform shadow-[0_-30px_60px_rgba(0,0,0,0.45)]">
+        <div
+          class="absolute inset-0 scale-110 bg-gradient-to-t from-ink via-[#163537] to-lagoon transition-transform duration-[7000ms] ease-out motion-reduce:transition-none group-data-[active=true]:scale-100">
+          <div class="absolute left-[55%] top-[8%] h-60 w-60 rounded-full bg-brass/20 blur-3xl"></div>
+          <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice"
+            class="absolute bottom-0 h-[85%] w-full text-ink" aria-hidden="true">
+            <g fill="currentColor" opacity=".9">
+              <path d="M780 600V60l60 40v500z" />
+              <rect x="860" y="140" width="110" height="460" />
+              <rect x="990" y="230" width="130" height="370" />
+              <rect x="1140" y="300" width="150" height="300" />
+              <rect x="620" y="240" width="130" height="360" />
+              <rect x="450" y="320" width="140" height="280" />
+              <rect x="0" y="420" width="420" height="180" />
+            </g>
+            <g fill="#CDAE7A" opacity=".55">
+              <rect x="800" y="140" width="6" height="12" />
+              <rect x="800" y="220" width="6" height="12" />
+              <rect x="890" y="200" width="8" height="12" />
+              <rect x="1020" y="290" width="8" height="12" />
+              <rect x="650" y="300" width="8" height="12" />
+            </g>
+          </svg>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center px-5 pb-28 sm:px-12 lg:px-[8%]">
+          <div>
+            <p
+              class="translate-y-6 text-3xl font-light uppercase tracking-wide opacity-0 transition duration-700 sm:text-5xl lg:text-6xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-300">
+              DPS</p>
+            <h2
+              class="translate-y-6 text-4xl font-extrabold uppercase leading-none tracking-wide opacity-0 transition duration-700 sm:text-6xl lg:text-7xl group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[450ms]">
+              Meridian Tower</h2>
+            <p
+              class="mt-4 translate-y-6 pl-1 text-xs font-bold uppercase tracking-[0.4em] text-brass opacity-0 transition duration-700 sm:text-sm group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[600ms]">
+              Downtown</p>
+            <a href="#"
+              class="mt-8 inline-block translate-y-6 border border-mist/50 bg-white/10 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] opacity-0 transition duration-700 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:px-10 sm:text-xs group-data-[active=true]:translate-y-0 group-data-[active=true]:opacity-100 group-data-[active=true]:delay-[750ms]">Discover
+              the collection</a>
+          </div>
+        </div>
+        <div data-dim class="pointer-events-none absolute inset-0 bg-ink opacity-0"></div>
+      </article>
+
+      <!-- ========== CONTROLS (vertical) ========== -->
+      <div
+        class="absolute right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-2 sm:right-6 lg:right-8">
+        <button type="button" data-prev aria-label="Previous project"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/40 bg-ink/40 text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m5 15 7-7 7 7" />
+          </svg>
+        </button>
+        <button type="button" data-dot data-active="true" aria-label="Go to project 1"
+          class="group flex h-8 w-6 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"><span
+            class="block h-2 w-2 rounded-full bg-mist/40 transition-all duration-500 group-data-[active=true]:h-6 group-data-[active=true]:bg-brass"></span></button>
+        <button type="button" data-dot data-active="false" aria-label="Go to project 2"
+          class="group flex h-8 w-6 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"><span
+            class="block h-2 w-2 rounded-full bg-mist/40 transition-all duration-500 group-data-[active=true]:h-6 group-data-[active=true]:bg-brass"></span></button>
+        <button type="button" data-dot data-active="false" aria-label="Go to project 3"
+          class="group flex h-8 w-6 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"><span
+            class="block h-2 w-2 rounded-full bg-mist/40 transition-all duration-500 group-data-[active=true]:h-6 group-data-[active=true]:bg-brass"></span></button>
+        <button type="button" data-dot data-active="false" aria-label="Go to project 4"
+          class="group flex h-8 w-6 items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass"><span
+            class="block h-2 w-2 rounded-full bg-mist/40 transition-all duration-500 group-data-[active=true]:h-6 group-data-[active=true]:bg-brass"></span></button>
+        <button type="button" data-next aria-label="Next project"
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/40 bg-ink/40 text-mist transition-colors duration-200 hover:border-brass hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m5 9 7 7 7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Scroll hint (fades after the first project) -->
+      <div data-hint
+        class="pointer-events-none absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1 text-[10px] font-bold uppercase tracking-[0.4em] text-mist/80 transition-opacity duration-500">
+        Scroll
+        <svg viewBox="0 0 24 24" class="h-5 w-5 animate-bounce text-brass" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m5 9 7 7 7-7" />
+        </svg>
+      </div>
+
+      <!-- Enquire button (bottom-left) -->
+      <a href="#contact" aria-label="Enquire now"
+        class="absolute bottom-6 left-5 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-brass text-ink shadow-lg transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist sm:left-8 lg:left-12 lg:h-14 lg:w-14">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER'S NOTE: copy from here ===== -->
+  <section id="founder"
+    class="group relative isolate overflow-hidden bg-mist bg-gradient-to-b from-mist to-white py-20 sm:py-28 lg:py-36"
+    aria-label="Founder's note">
+
+    <!-- soft glow -->
+    <div
+      class="pointer-events-none absolute -left-24 bottom-0 -z-10 h-80 w-80 rounded-full bg-brass/25 blur-3xl sm:h-[28rem] sm:w-[28rem]"
+      aria-hidden="true"></div>
+
+    <div class="mx-auto grid max-w-[1200px] items-center gap-16 px-6 sm:px-8 lg:grid-cols-[5fr_6fr] lg:gap-24 lg:px-12">
+
+      <!-- LEFT: arched portrait -->
+      <div class="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-none">
+
+        <!-- offset brass frame (slides out from behind the photo) -->
+        <div
+          class="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-t-full border border-brass transition duration-[1600ms] delay-[600ms] ease-out sm:translate-x-6 sm:translate-y-6 group-data-[hide=true]:translate-x-0 group-data-[hide=true]:translate-y-0 group-data-[hide=true]:opacity-0"
+          aria-hidden="true"></div>
+
+        <!-- photo: opens like a curtain, then settles with a slow zoom-out -->
+        <div
+          class="relative aspect-[4/5] overflow-hidden rounded-t-full bg-lagoon transition-[clip-path] duration-[1600ms] ease-[cubic-bezier(.77,0,.175,1)] [clip-path:inset(0_0_0_0)] group-data-[hide=true]:[clip-path:inset(0_100%_0_0)]">
+
+          <!-- DEMO IMAGE. To use a real photo, replace this whole <div> with:
+               <img src="founder.jpg" alt="Founder of DPS Realtors" class="h-full w-full scale-100 object-cover transition-transform duration-[2400ms] ease-out group-data-[hide=true]:scale-125" /> -->
+          <div
+            class="absolute inset-0 scale-100 bg-gradient-to-b from-lagoon via-[#10292b] to-ink transition-transform duration-[2400ms] ease-out group-data-[hide=true]:scale-125">
+            <div class="absolute left-1/2 top-[18%] h-48 w-48 -translate-x-1/2 rounded-full bg-brass/25 blur-3xl"></div>
+            <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" class="absolute inset-0 h-full w-full"
+              aria-hidden="true">
+              <circle cx="200" cy="200" r="66" fill="#CDAE7A" opacity=".35" />
+              <path d="M50 500c0-100 65-160 150-160s150 60 150 160z" fill="#CDAE7A" opacity=".3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: heading + note -->
+      <div class="relative">
+        <!-- decorative quote mark -->
+        <span
+          class="pointer-events-none absolute -top-10 right-0 select-none font-display text-[10rem] leading-none text-brass/25 transition duration-1000 delay-[800ms] ease-out sm:-top-14 sm:text-[14rem] group-data-[hide=true]:translate-y-6 group-data-[hide=true]:opacity-0"
+          aria-hidden="true">&ldquo;</span>
+
+        <p
+          class="relative text-[11px] font-bold uppercase tracking-[0.5em] text-[#8A6B35] transition duration-1000 delay-[300ms] ease-out sm:text-xs group-data-[hide=true]:translate-y-4 group-data-[hide=true]:opacity-0">
+          Founder's note</p>
+
+        <h2 class="relative mt-5 font-display text-4xl font-medium leading-[1.1] text-ink sm:text-5xl lg:text-6xl">
+          <span class="block overflow-hidden pb-1.5"><span
+              class="block transition-transform duration-[1200ms] delay-[500ms] ease-out group-data-[hide=true]:translate-y-[115%]">Building
+              more than homes,</span></span>
+          <span class="block overflow-hidden pb-1.5"><span
+              class="block transition-transform duration-[1200ms] delay-[650ms] ease-out group-data-[hide=true]:translate-y-[115%]">building
+              lasting <em class="font-medium text-[#8A6B35]">trust.</em></span></span>
+        </h2>
+
+        <!-- line draws itself -->
+        <div
+          class="mt-8 h-px w-20 origin-left bg-brass transition-transform duration-1000 delay-[900ms] ease-out group-data-[hide=true]:scale-x-0 sm:w-28"
+          aria-hidden="true"></div>
+
+        <div class="relative mt-8 max-w-xl space-y-5 text-base leading-relaxed text-ink/75 sm:text-lg">
+          <p
+            class="transition duration-1000 delay-[1000ms] ease-out group-data-[hide=true]:translate-y-6 group-data-[hide=true]:opacity-0">
+            When we laid our first foundation, we made a simple promise: every home we build must feel as good to live
+            in as it looks on paper. Two decades on, that promise still guides every decision we make.
+          </p>
+          <p
+            class="transition duration-1000 delay-[1150ms] ease-out group-data-[hide=true]:translate-y-6 group-data-[hide=true]:opacity-0">
+            To the families who trust us with their most important purchase, thank you. We will keep building with care,
+            speaking with honesty, and standing by your side long after handover.
+          </p>
+        </div>
+
+        <!-- signature -->
+        <div
+          class="relative mt-10 transition duration-1000 delay-[1350ms] ease-out group-data-[hide=true]:translate-y-6 group-data-[hide=true]:opacity-0">
+          <p class="font-display text-3xl font-semibold italic text-[#8A6B35] sm:text-4xl">Aarav Mehta</p>
+          <p class="mt-2 text-[11px] font-bold uppercase tracking-[0.3em] text-ink/70 sm:text-xs">Founder &amp;
+            Chairman, DPS Realtors</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS start from here ===== -->
+  <section id="partners"
+    class="relative isolate overflow-hidden bg-white bg-gradient-to-b from-white via-mist/60 to-white py-20 sm:py-28 lg:py-32"
+    aria-label="Our partners">
+
+    <!-- faint abstract rings -->
+    <svg viewBox="0 0 800 800"
+      class="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[140%] w-auto -translate-x-1/2 -translate-y-1/2 text-lagoon sm:h-[170%]"
+      fill="none" stroke="currentColor" stroke-width="1" opacity=".07" aria-hidden="true">
+      <circle cx="400" cy="400" r="380" />
+      <circle cx="400" cy="400" r="300" />
+      <circle cx="400" cy="400" r="220" />
+      <circle cx="400" cy="400" r="140" />
+    </svg>
+
+    <!-- heading -->
+    <div data-reveal
+      class="mx-auto max-w-3xl px-6 text-center transition duration-1000 ease-out data-[hide=true]:translate-y-8 data-[hide=true]:opacity-0">
+      <p class="text-[11px] font-bold uppercase tracking-[0.5em] text-[#8A6B35] sm:text-xs">Our partners</p>
+      <h2 class="mt-5 font-display text-3xl font-medium leading-tight text-ink sm:text-5xl lg:text-6xl">
+        Built alongside the <em class="font-medium text-[#8A6B35]">finest names</em> in the industry
+      </h2>
+      <div class="mx-auto mt-7 flex items-center justify-center gap-3" aria-hidden="true">
+        <span class="h-px w-12 bg-brass sm:w-20"></span>
+        <span class="h-1.5 w-1.5 rotate-45 bg-brass"></span>
+        <span class="h-px w-12 bg-brass sm:w-20"></span>
+      </div>
+    </div>
+
+    <!-- marquee rows -->
+    <div data-reveal
+      class="relative mt-14 space-y-5 transition duration-1000 delay-300 ease-out data-[hide=true]:translate-y-8 data-[hide=true]:opacity-0 sm:mt-16 sm:space-y-6">
+
+      <!-- edge fades -->
+      <div
+        class="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-white/0 sm:w-40"
+        aria-hidden="true"></div>
+      <div
+        class="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-white/0 sm:w-40"
+        aria-hidden="true"></div>
+
+      <!-- Row 1 (moves left) -->
+      <div class="overflow-hidden py-3 motion-reduce:overflow-x-auto">
+        <ul data-track
+          class="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">A</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">ABC
+                  Capital</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Finance</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">X</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">XYZ
+                  Group</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Construction</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">O</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Orion
+                  Builders</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Development</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">L</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Lumen
+                  Studio</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Architecture</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">V</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Vertex
+                  Eng.</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Engineering</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">N</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Nova
+                  Bank</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Mortgage</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Row 2 (moves right) -->
+      <div class="overflow-hidden py-3 motion-reduce:overflow-x-auto">
+        <ul data-track
+          class="flex w-max animate-marquee-rev hover:[animation-play-state:paused] motion-reduce:animate-none">
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">A</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Atlas
+                  Interiors</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Interior
+                  design</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">C</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Crest
+                  Hotels</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Hospitality</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">P</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Pinnacle
+                  Law</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Legal</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">S</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Solis
+                  Energy</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Sustainability</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">M</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Meridian
+                  Tech</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Smart
+                  homes</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+          <li class="shrink-0 pr-5 sm:pr-6"><a href="#"
+              class="group relative flex h-28 w-56 items-center gap-4 overflow-hidden rounded-2xl border border-ink/10 bg-white px-5 transition duration-500 hover:-translate-y-1.5 hover:border-brass hover:shadow-xl hover:shadow-ink/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brass sm:w-64"><span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-brass/60 font-display text-lg font-semibold text-ink transition duration-500 group-hover:bg-brass group-hover:text-ink">H</span><span><span
+                  class="block font-display text-xl font-semibold text-ink transition-colors duration-500 group-hover:text-lagoon">Harbor
+                  Marine</span><span
+                  class="mt-0.5 block text-[10px] font-bold uppercase tracking-[0.25em] text-ink/65 transition-colors duration-500 group-hover:text-[#8A6B35]">Waterfront</span></span><span
+                class="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brass transition-transform duration-500 group-hover:scale-x-100"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div data-reveal
+      class="mt-12 text-center transition duration-1000 delay-500 ease-out data-[hide=true]:translate-y-8 data-[hide=true]:opacity-0">
+      <a href="#"
+        class="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-ink transition-colors duration-300 hover:text-[#8A6B35] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+        Become a partner
+        <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER start from here ===== -->
+  <footer id="contact" class="overflow-hidden bg-ink text-mist" aria-label="Contact and footer">
+
+    <div class="relative grid lg:min-h-[100dvh] lg:grid-cols-[2fr_3fr]">
+
+      <!-- centre seam: draws itself when the two halves meet (large screens) -->
+      <div data-seam
+        class="pointer-events-none absolute left-[40%] top-0 z-10 hidden h-full w-px origin-top scale-y-0 bg-brass/70 lg:block"
+        aria-hidden="true"></div>
+
+      <!-- LEFT: heading, links, socials -->
+      <div data-panel="left"
+        class="flex flex-col justify-between gap-16 bg-ink px-6 will-change-transform py-14 sm:px-12 lg:px-16 lg:py-16 xl:px-20">
+
+        <a href="#" data-fade aria-label="DPS Realtors home"
+          class="inline-flex w-fit flex-col leading-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass">
+          <span class="font-display text-3xl font-semibold tracking-[0.3em] text-mist">DPS</span>
+          <span class="mt-1.5 text-[9px] font-bold uppercase tracking-[0.5em] text-brass">Realtors</span>
+        </a>
+
+        <div>
+          <h2 data-fade class="text-4xl leading-[1.15] uppercase sm:text-5xl lg:text-6xl">
+            <span class="block font-extrabold text-mist">Own</span>
+            <span class="block font-light text-mist">Your</span>
+            <span class="block font-light text-mist">Tomorrow</span>
+          </h2>
+
+          <ul data-fade class="mt-10 space-y-3 sm:mt-12">
+            <li>
+              <a href="#"
+                class="group inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-mist/75 transition-colors duration-300 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:text-base">
+                Book a private viewing
+                <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="m9 5 7 7-7 7" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="group inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-mist/75 transition-colors duration-300 hover:text-brass focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:text-base">
+                Explore our communities
+                <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="m9 5 7 7-7 7" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul data-fade class="flex flex-wrap gap-3" aria-label="Social media">
+          <li><a href="#" aria-label="Instagram"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/60 text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"><svg
+                viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.2" cy="6.8" r=".6" fill="currentColor" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Facebook"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/60 text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"><svg
+                viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M13.5 21v-7.5H16l.5-3h-3V8.7c0-.9.3-1.5 1.6-1.5h1.5V4.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H8v3h2.5V21z" />
+              </svg></a></li>
+          <li><a href="#" aria-label="YouTube"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/60 text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"><svg
+                viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+                <path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" />
+              </svg></a></li>
+          <li><a href="#" aria-label="LinkedIn"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/60 text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"><svg
+                viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 10v8M6 6.5v.01M10.5 18v-8M10.5 13.5a3.5 3.5 0 0 1 7 0V18" />
+              </svg></a></li>
+          <li><a href="#" aria-label="Snapchat"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-mist/60 text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"><svg
+                viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M12 3.5c-2.7 0-4.4 1.9-4.4 4.5v2.2c-.8.2-1.6.4-1.6.9s.8.8 1.4 1c-.3 1-1.2 2-2.4 2.4.2.6 1.2.8 2.2 1 .2.6.5 1 1 1 .8 0 1.2-.8 2.3-.8s1.5.8 2.3.8c.5 0 .8-.4 1-1 1-.2 2-.4 2.2-1-1.2-.4-2.1-1.4-2.4-2.4.6-.2 1.4-.5 1.4-1s-.8-.7-1.6-.9V8c0-2.6-1.7-4.5-4.4-4.5z" />
+              </svg></a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: form over abstract skyline -->
+      <div data-panel="right"
+        class="relative isolate flex items-center overflow-hidden bg-lagoon px-6 will-change-transform py-16 sm:px-12 lg:px-16 xl:px-24">
+
+        <!-- background art (swap for a real photo: <img class="absolute inset-0 -z-20 h-full w-full object-cover" ...>) -->
+        <div data-art class="absolute inset-0 -z-20 bg-gradient-to-br from-lagoon via-[#10292b] to-ink"
+          aria-hidden="true">
+          <div class="absolute right-[10%] top-[8%] h-64 w-64 rounded-full bg-brass/20 blur-3xl"></div>
+          <svg viewBox="0 0 800 900" preserveAspectRatio="xMidYMax slice"
+            class="absolute bottom-0 h-full w-full text-ink" aria-hidden="true">
+            <g fill="currentColor" opacity=".85">
+              <path d="M80 900V200q0-60 40-90 40 30 40 90v700z" />
+              <rect x="190" y="360" width="110" height="540" />
+              <rect x="320" y="470" width="130" height="430" />
+              <rect x="470" y="300" width="100" height="600" />
+              <rect x="590" y="520" width="120" height="380" />
+              <rect x="720" y="600" width="100" height="300" />
+            </g>
+            <g fill="#CDAE7A" opacity=".5">
+              <rect x="105" y="260" width="8" height="12" />
+              <rect x="125" y="340" width="8" height="12" />
+              <rect x="215" y="420" width="8" height="12" />
+              <rect x="495" y="360" width="8" height="12" />
+              <rect x="345" y="530" width="8" height="12" />
+              <rect x="615" y="580" width="8" height="12" />
+            </g>
+          </svg>
+        </div>
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/50 via-ink/60 to-ink/85" aria-hidden="true"></div>
+
+        <div data-fade class="mx-auto w-full max-w-lg">
+          <form id="interest-form" class="space-y-2" novalidate>
+            <div>
+              <label for="f-name" class="sr-only">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="NAME"
+                class="w-full border-0 border-b border-mist/70 bg-transparent px-0 py-5 text-base font-semibold tracking-wider text-mist transition-colors duration-300 placeholder:font-bold placeholder:uppercase placeholder:tracking-wider placeholder:text-mist/70 focus:border-brass focus:outline-none focus:ring-0 [&:-webkit-autofill]:[-webkit-text-fill-color:#E9EFEC] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]" />
+            </div>
+            <div>
+              <label for="f-mobile" class="sr-only">Mobile number</label>
+              <input id="f-mobile" name="mobile" type="tel" inputmode="tel" autocomplete="tel" required
+                pattern="[0-9 ()\-]{7,15}" placeholder="MOBILE"
+                class="w-full border-0 border-b border-mist/70 bg-transparent px-0 py-5 text-base font-semibold tracking-wider text-mist transition-colors duration-300 placeholder:font-bold placeholder:uppercase placeholder:tracking-wider placeholder:text-mist/70 focus:border-brass focus:outline-none focus:ring-0 [&:-webkit-autofill]:[-webkit-text-fill-color:#E9EFEC] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]" />
+            </div>
+            <div>
+              <label for="f-email" class="sr-only">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="EMAIL"
+                class="w-full border-0 border-b border-mist/70 bg-transparent px-0 py-5 text-base font-semibold tracking-wider text-mist transition-colors duration-300 placeholder:font-bold placeholder:uppercase placeholder:tracking-wider placeholder:text-mist/70 focus:border-brass focus:outline-none focus:ring-0 [&:-webkit-autofill]:[-webkit-text-fill-color:#E9EFEC] [&:-webkit-autofill]:[transition:background-color_9999s_ease-in-out_0s]" />
+            </div>
+
+            <p id="form-error" class="hidden pt-3 text-xs font-semibold text-brass" role="alert">Please fill in your
+              name, a valid mobile number and email.</p>
+
+            <p class="pt-8 text-xs text-mist/70">
+              By submitting, you agree to DPS Realtors' <a href="#"
+                class="underline underline-offset-2 transition-colors hover:text-brass">terms &amp; conditions</a>*
+            </p>
+
+            <button type="submit"
+              class="mt-8 w-full border border-mist/50 bg-white/10 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-mist transition-colors duration-300 hover:border-brass hover:bg-brass hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brass sm:text-xs">
+              Request a callback
+            </button>
+          </form>
+
+          <!-- success message -->
+          <div id="form-success" class="hidden text-center" role="status" aria-live="polite">
+            <span
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-brass text-brass">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12 5 5 9-10" />
+              </svg>
+            </span>
+            <p class="mt-6 font-display text-3xl font-semibold text-mist sm:text-4xl">Thank you</p>
+            <p class="mt-3 text-sm text-mist/75">A DPS Realtors advisor will be in touch with you shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- legal bar -->
+    <div class="border-t border-brass/25 bg-ink">
+      <div
+        class="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-mist/60 sm:px-12 md:flex-row lg:px-16">
+        <p>&copy; 2026 DPS Realtors. All rights reserved.</p>
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <li><a href="#" class="transition-colors duration-300 hover:text-brass">Privacy Policy</a></li>
+          <li><a href="#" class="transition-colors duration-300 hover:text-brass">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="transition-colors duration-300 hover:text-brass">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+      (function () {
+        var sec = document.getElementById('detail');
+        var intro = document.getElementById('intro');
+        var stage = document.getElementById('stage');
+        var bar = document.getElementById('bar');
+        var counter = document.getElementById('counter');
+        var items = sec.querySelectorAll('[data-item]');
+        var panels = sec.querySelectorAll('[data-panel]');
+        var N = items.length;
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var current = -1, ticking = false;
+
+        function clamp(v) {return Math.min(1, Math.max(0, v));}
+
+        function setActive(i) {
+          if (i === current) return;
+          current = i;
+          for (var k = 0; k < N; k++) {
+            items[k].setAttribute('data-active', k === i ? 'true' : 'false');
+            panels[k].setAttribute('data-active', k === i ? 'true' : 'false');
+          }
+          counter.textContent = '0' + (i + 1) + ' / 0' + N;
+        }
+
+        function update() {
+          ticking = false;
+          var total = sec.offsetHeight - window.innerHeight;
+          var p = clamp(-sec.getBoundingClientRect().top / total);
+          var t1 = clamp(p / 0.18);
+          var t2 = clamp((p - 0.12) / 0.12);
+          var q = clamp((p - 0.24) / 0.76);
+
+          if (reduce) {
+            intro.style.display = 'none';
+            stage.style.opacity = 1;
+          } else {
+            intro.style.opacity = 1 - t1;
+            intro.style.transform = 'scale(' + (1 + t1 * 0.15) + ')';
+            intro.style.pointerEvents = t1 > 0.9 ? 'none' : 'auto';
+            stage.style.opacity = t2;
+            stage.style.transform = 'translateY(' + ((1 - t2) * 40) + 'px)';
+            stage.style.pointerEvents = t2 < 0.5 ? 'none' : 'auto';
+          }
+          bar.style.transform = 'scaleY(' + q + ')';
+          setActive(Math.min(N - 1, Math.floor(q * N)));
+        }
+
+        function onScroll() {
+          if (!ticking) {ticking = true; window.requestAnimationFrame(update);}
+        }
+
+        window.addEventListener('scroll', onScroll, {passive: true});
+        window.addEventListener('resize', onScroll);
+        update();
+      })();
+
+    (function () {
+      var section = document.getElementById('stats');
+      var nodes = section.querySelectorAll('[data-count]');
+      var DURATION = 2200;
+      var started = false;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function ease(t) {return 1 - Math.pow(1 - t, 3);} // easeOutCubic
+
+      function run(el, delay) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        el.textContent = '0';
+        setTimeout(function () {
+          var t0 = null;
+          function frame(ts) {
+            if (t0 === null) t0 = ts;
+            var p = Math.min(1, (ts - t0) / DURATION);
+            el.textContent = Math.round(target * ease(p));
+            if (p < 1) window.requestAnimationFrame(frame);
+            else el.textContent = target;
+          }
+          window.requestAnimationFrame(frame);
+        }, delay);
+      }
+
+      function start() {
+        if (started) return;
+        started = true;
+        if (reduce) return; // final numbers already in the HTML
+        for (var i = 0; i < nodes.length; i++) run(nodes[i], i * 150);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) {start(); io.disconnect();}
+        }, {threshold: 0.35});
+        io.observe(section);
+      } else {
+        start(); // very old browsers: just count on load
+      }
+    })();
+    // <-- PROJECT CAROUSEL -->
+    (function () {
+      var sec = document.getElementById('showcase');
+      var stage = document.getElementById('stage');
+      var slides = sec.querySelectorAll('[data-slide]');
+      var dots = sec.querySelectorAll('[data-dot]');
+      var hint = sec.querySelector('[data-hint]');
+      var N = slides.length, idx = -1, ticking = false;
+
+      function clamp(v) {return Math.min(1, Math.max(0, v));}
+
+      function setActive(i) {
+        if (i === idx) return;
+        idx = i;
+        for (var k = 0; k < N; k++) {
+          var on = k === i ? 'true' : 'false';
+          slides[k].setAttribute('data-active', on);
+          slides[k].setAttribute('aria-hidden', k === i ? 'false' : 'true');
+          dots[k].setAttribute('data-active', on);
+        }
+        hint.style.opacity = i === 0 ? 1 : 0;
+      }
+
+      function update() {
+        ticking = false;
+        var total = sec.offsetHeight - stage.offsetHeight;
+        var p = clamp(-sec.getBoundingClientRect().top / total);
+        var s = p * (N - 1);
+        for (var i = 0; i < N; i++) {
+          var enter = i === 0 ? 0 : (1 - clamp(s - (i - 1))) * 100; // slide rises from the bottom
+          var cover = i < N - 1 ? clamp(s - i) : 0;                 // next slide covering this one
+          slides[i].style.zIndex = i + 1;
+          slides[i].style.transform = 'translate3d(0,' + (enter - cover * 18) + '%,0)';
+          slides[i].querySelector('[data-dim]').style.opacity = cover * 0.6;
+        }
+        setActive(Math.round(s));
+      }
+
+      function onScroll() {
+        if (!ticking) {ticking = true; window.requestAnimationFrame(update);}
+      }
+
+      function goTo(i) {
+        i = Math.max(0, Math.min(N - 1, i));
+        var total = sec.offsetHeight - stage.offsetHeight;
+        var top = sec.getBoundingClientRect().top + window.pageYOffset + (i / (N - 1)) * total;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+
+      sec.querySelector('[data-next]').addEventListener('click', function () {goTo(idx + 1);});
+      sec.querySelector('[data-prev]').addEventListener('click', function () {goTo(idx - 1);});
+      for (var d = 0; d < dots.length; d++) {
+        (function (i) {dots[i].addEventListener('click', function () {goTo(i);});})(d);
+      }
+      sec.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowDown') {e.preventDefault(); goTo(idx + 1);}
+        if (e.key === 'ArrowUp') {e.preventDefault(); goTo(idx - 1);}
+      });
+
+      window.addEventListener('scroll', onScroll, {passive: true});
+      window.addEventListener('resize', onScroll);
+      update();
+    })();
+
+    //PARTNERS
+    (function () {
+      /* 1. Make each marquee row loop seamlessly: fill the row, then duplicate it once */
+      function build(track) {
+        var items = Array.prototype.slice.call(track.children);
+        var oneWidth = track.scrollWidth;
+        var repeat = Math.max(1, Math.ceil(window.innerWidth / oneWidth));
+        for (var r = 1; r < repeat; r++) {
+          items.forEach(function (li) {track.appendChild(li.cloneNode(true));});
+        }
+        Array.prototype.slice.call(track.children).forEach(function (li) {
+          var c = li.cloneNode(true);
+          c.setAttribute('aria-hidden', 'true');
+          c.querySelector('a').setAttribute('tabindex', '-1');
+          track.appendChild(c);
+        });
+      }
+      var tracks = document.querySelectorAll('#partners [data-track]');
+      for (var i = 0; i < tracks.length; i++) build(tracks[i]);
+
+      /* 2. Fade-up reveal when the section scrolls into view */
+      var els = document.querySelectorAll('#partners [data-reveal]');
+      if (!('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {e.target.setAttribute('data-hide', 'false'); io.unobserve(e.target);}
+        });
+      }, {threshold: 0.15});
+      for (var j = 0; j < els.length; j++) {els[j].setAttribute('data-hide', 'true'); io.observe(els[j]);}
+    })();
+
+    //FOOTER
+    (function () {
+      var form = document.getElementById('interest-form');
+      var ok = document.getElementById('form-success');
+      var err = document.getElementById('form-error');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = form.name.value.trim();
+        var mobile = form.mobile.value.trim();
+        var email = form.email.value.trim();
+        var mobileOk = /^[0-9 ()\-]{7,15}$/.test(mobile);
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!name || !mobileOk || !emailOk) {err.classList.remove('hidden'); return;}
+        err.classList.add('hidden');
+        // TODO: send { name, mobile, email } to your backend / CRM here
+        form.classList.add('hidden');
+        ok.classList.remove('hidden');
+      });
+    })();
+
+    /* Panels slide in from the left and right and meet in the middle as you scroll */
+    (function () {
+      var panels = document.querySelectorAll('#contact [data-panel]');
+      var seam = document.querySelector('#contact [data-seam]');
+      var art = document.querySelector('#contact [data-art]');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var ticking = false;
+
+      function clamp(v) {return Math.min(1, Math.max(0, v));}
+
+      function update() {
+        ticking = false;
+        var vh = window.innerHeight;
+        // scroll distance still left until the very bottom of the page
+        var left = Math.max(0, document.documentElement.scrollHeight - vh - window.pageYOffset);
+        var minP = 1;
+
+        for (var i = 0; i < panels.length; i++) {
+          var el = panels[i];
+          var dir = el.getAttribute('data-panel') === 'left' ? -1 : 1;
+          var top = el.getBoundingClientRect().top;
+          var seen = vh - top;                                   // how far the panel has entered the screen
+          var p = reduce ? 1 : clamp(seen / Math.max(1, seen + left)); // 0 when it appears, 1 at page bottom
+          el.style.transform = 'translate3d(' + (dir * (1 - p) * 100) + '%,0,0)';
+          minP = Math.min(minP, p);
+
+          var items = el.querySelectorAll('[data-fade]');
+          for (var k = 0; k < items.length; k++) {
+            var f = reduce ? 1 : clamp((p - 0.5) / 0.3 - k * 0.1);
+            items[k].style.opacity = f;
+            items[k].style.transform = 'translate3d(0,' + ((1 - f) * 24) + 'px,0)';
+          }
+        }
+        if (seam) seam.style.transform = 'scaleY(' + clamp((minP - 0.8) / 0.2) + ')';
+        if (art) art.style.transform = 'scale(' + (1.18 - 0.18 * minP) + ')';
+      }
+
+      function onScroll() {if (!ticking) {ticking = true; window.requestAnimationFrame(update);} }
+      window.addEventListener('scroll', onScroll, {passive: true});
+      window.addEventListener('resize', onScroll);
+      window.addEventListener('load', update);
+      update();
+    })();
+
+    /* Founder's note: plays once when the section scrolls into view */
+    (function () {
+      var sec = document.getElementById('founder');
+      if (!sec) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return; // content simply stays visible
+      sec.setAttribute('data-hide', 'true');
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {sec.setAttribute('data-hide', 'false'); io.disconnect();}
+      }, {threshold: 0.2, rootMargin: '0px 0px -10% 0px'});
+      io.observe(sec);
+    })();
+  </script>
+
+</body>
+
+</html>
